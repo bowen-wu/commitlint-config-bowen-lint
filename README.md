@@ -1,48 +1,53 @@
-# eslint-plugin-bowen-lint
+# commitlint-config-bowen-lint
 
-commitlint bowen plugin
+commitlint config
 
 ## Installation
 
-You'll first need to install [ESLint](http://eslint.org):
-
 ```
-$ npm i eslint --save-dev
-```
+$ npm install commitlint-config-bowen-lint --save-dev
 
-Next, install `eslint-plugin-bowen-lint`:
-
+// yarn
+$ yarn add commitlint-config-bowen-lint -D
 ```
-$ npm install eslint-plugin-bowen-lint --save-dev
-```
-
 
 ## Usage
 
-Add `bowen-lint` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `bowen-lint` to the extends section of your `.commitlintrc.js ` configuration file. You can omit
+the `commitlint-config-` prefix:
 
 ```json
 {
-    "plugins": [
+    "extends": [
         "bowen-lint"
     ]
 }
 ```
 
+## Configuration
 
-Then configure the rules you want to use under the rules section.
-
-```json
-{
-    "rules": {
-        "bowen-lint/rule-name": 2
-    }
+```
+extends: ['@commitlint/config-conventional'],
+rules: {
+    'type-enum': [
+        2,
+        'always',
+        [
+            'feat', 
+            'fix', 
+            'docs',
+            'style', 
+            'refactor', 
+            'test', 
+            'chore', 
+        ],
+    ],
+    'scope-empty': [1, 'always'],
+    'body-leading-blank': [2, 'always'],
+    'footer-leading-blank': [2, 'always'],
 }
 ```
 
-## Supported Rules
-
-* Fill in provided rules here
 
 
 
