@@ -1,6 +1,6 @@
 {
     "name": "commitlint-config-bowen-lint",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "description": "commitlint bowen config",
     "keywords": [
         "commitlint",
