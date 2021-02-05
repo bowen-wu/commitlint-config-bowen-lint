@@ -1,6 +1,6 @@
 {
     "name": "commitlint-config-bowen-lint",
-    "version": "0.0.0",
+    "version": "0.0.2",
     "description": "commitlint bowen config",
     "keywords": [
         "commitlint",
@@ -12,10 +12,10 @@
         "test": "mocha tests --recursive"
     },
     "dependencies": {
-        "@commitlint/config-conventional": "^11.0.0"
+        "@commitlint/config-conventional": "^11.0.0",
+        "@commitlint/cli": "^11.0.0"
     },
     "devDependencies": {
-        "@commitlint/cli": "^11.0.0",
         "mocha": "^7.2.0"
     },
     "engines": {
